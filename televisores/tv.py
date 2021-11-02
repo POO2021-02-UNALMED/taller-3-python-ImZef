@@ -7,7 +7,7 @@ class TV:
         self._estado = estado
         self._volumen = 1
         self.control = None
-        self._numTV += 1
+        TV._numTV += 1
     
     def setMarca(self, marca):
         self._marca = marca
@@ -44,8 +44,9 @@ class TV:
     def setNumTV(cls, num):
         cls._numTV = num
 
-    def getNumTV(self):
-        return self._numTV
+    @classmethod
+    def getNumTV(cls):
+        return cls._numTV
     
     def turnOn(self):
         if self._estado == False:
