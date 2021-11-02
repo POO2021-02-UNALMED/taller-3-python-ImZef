@@ -40,7 +40,10 @@ class TV:
     def getCanal(self):
         return self.canal
 
-    def getnumTV(self):
+    def sefNumTV(self, num):
+        self._numTV = num
+
+    def getNumTV(self):
         return self._numTV
     
     def turnOn(self):
